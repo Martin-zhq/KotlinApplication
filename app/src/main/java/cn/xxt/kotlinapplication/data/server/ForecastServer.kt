@@ -1,7 +1,7 @@
 package cn.xxt.kotlinapplication.data.server
 
 import cn.xxt.kotlinapplication.data.db.ForecastDb
-import cn.xxt.kotlinapplication.domain.ForecastList
+import cn.xxt.kotlinapplication.domain.model.ForecastList
 import cn.xxt.kotlinapplication.domain.datasource.ForecastDataSource
 
 class ForecastServer(val dataMapper: ServerDataMapper = ServerDataMapper(),

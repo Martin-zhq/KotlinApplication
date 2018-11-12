@@ -1,7 +1,7 @@
 package cn.xxt.kotlinapplication.data.db
 
-import cn.xxt.kotlinapplication.domain.Forecast
-import cn.xxt.kotlinapplication.domain.ForecastList
+import cn.xxt.kotlinapplication.domain.model.Forecast
+import cn.xxt.kotlinapplication.domain.model.ForecastList
 
 class DbDataMapper {
 

@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import cn.xxt.kotlinapplication.R
-import cn.xxt.kotlinapplication.domain.Forecast
-import cn.xxt.kotlinapplication.domain.ForecastList
+import cn.xxt.kotlinapplication.domain.model.Forecast
+import cn.xxt.kotlinapplication.domain.model.ForecastList
 import cn.xxt.kotlinapplication.extensions.ctx
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.find

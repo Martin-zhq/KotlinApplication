@@ -1,11 +1,14 @@
 package cn.xxt.kotlinapplication.data.db
 
 import cn.xxt.kotlinapplication.domain.datasource.ForecastDataSource
-import cn.xxt.kotlinapplication.domain.ForecastList
+import cn.xxt.kotlinapplication.domain.model.Forecast
+import cn.xxt.kotlinapplication.domain.model.ForecastList
 import cn.xxt.kotlinapplication.extensions.clear
 import cn.xxt.kotlinapplication.extensions.parseList
 import cn.xxt.kotlinapplication.extensions.parseOpt
 import cn.xxt.kotlinapplication.extensions.toVarargArray
+import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.coroutines.experimental.selects.select
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 
@@ -28,6 +31,13 @@ class ForecastDb(
 
         if (null != city) dataMapper.convertToDomain(city) else null
     }
+
+    override fun requestDayForecast(id: Long): Forecast? {
+        val forecast = select(DayForecastTable.NAME).byId(id).
+                parseOpt{ DayForecast(HashMap(it))}
+        if (forecast != null )dataMapper.convertDayToDomain(forecast) else null
+    }
+
 
     fun  saveForecast(forecast: ForecastList) = forecastDbHelper.use {
         clear(CityForecastTable.NAME)

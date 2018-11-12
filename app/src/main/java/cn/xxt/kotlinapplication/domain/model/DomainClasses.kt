@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication.domain
+package cn.xxt.kotlinapplication.domain.model
 
 data class ForecastList(val id: Long, val city: String, val country: String,
                         val dailyForecast: List<Forecast>) {

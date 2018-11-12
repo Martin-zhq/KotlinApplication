@@ -1,9 +1,9 @@
 package cn.xxt.kotlinapplication.data.server
 
-import cn.xxt.kotlinapplication.domain.ForecastList
+import cn.xxt.kotlinapplication.domain.model.ForecastList
 import java.util.*
 import java.util.concurrent.TimeUnit
-import cn.xxt.kotlinapplication.domain.Forecast as ModelForecast
+import cn.xxt.kotlinapplication.domain.model.Forecast as ModelForecast
 
 class ServerDataMapper {
 
@@ -23,7 +23,7 @@ class ServerDataMapper {
 
 
     fun convertToDomain(zipCode: Long, forecast: ForecastResult) = with(forecast) {
-        ForecastList(zipCode,city.name, city.country, convertForecastListToDomain(list))
+        ForecastList(zipCode, city.name, city.country, convertForecastListToDomain(list))
     }
 
 }
