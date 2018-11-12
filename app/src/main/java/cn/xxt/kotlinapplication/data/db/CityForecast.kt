@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication.data.db.model
+package cn.xxt.kotlinapplication.data.db
 
 class CityForecast(val map: MutableMap<String, Any?>,
                    val dailyForecast: List<DayForecast>) {

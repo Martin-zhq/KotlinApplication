@@ -2,7 +2,7 @@ package cn.xxt.kotlinapplication.data.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import cn.xxt.kotlinapplication.App
+import cn.xxt.kotlinapplication.ui.App
 import org.jetbrains.anko.db.*
 
 class ForecastDbHelper(ctx: Context = App.instance): ManagedSQLiteOpenHelper(App.instance, ForecastDbHelper.DB_NAME, null,

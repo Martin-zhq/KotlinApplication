@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication
+package cn.xxt.kotlinapplication.ui
 
 import android.app.Application
 import cn.xxt.kotlinapplication.delegate.NotNullSinglValueVar

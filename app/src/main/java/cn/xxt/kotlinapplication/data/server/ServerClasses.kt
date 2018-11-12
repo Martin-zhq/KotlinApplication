@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication.data
+package cn.xxt.kotlinapplication.data.server
 
 
 data class Temperature(val day: Float, val min: Float, val max: Float, val night: Float,

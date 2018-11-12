@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication
+package cn.xxt.kotlinapplication.extensions
 
 import android.content.Context
 import android.view.View

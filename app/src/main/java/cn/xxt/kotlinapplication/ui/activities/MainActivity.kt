@@ -1,12 +1,11 @@
-package cn.xxt.kotlinapplication
+package cn.xxt.kotlinapplication.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import cn.xxt.kotlinapplication.domain.RequestForecastCommand
+import cn.xxt.kotlinapplication.R
 import org.jetbrains.anko.custom.async
-import org.jetbrains.anko.toast
 import org.jetbrains.anko.uiThread
 
 
@@ -32,9 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         //获取数据
         async() {
-            val result = RequestForecastCommand("94043").execute()
+//            val result = RequestForecastCommand("94043").execute()
             uiThread {
-                rvForecast.adapter = ForecastListAdapter(result) { toast(it.date) }
+//                rvForecast.adapter = ForecastListAdapter(result) { toast(it.description) }
             }
         }
     }

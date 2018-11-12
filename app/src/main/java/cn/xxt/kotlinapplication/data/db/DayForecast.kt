@@ -1,4 +1,4 @@
-package cn.xxt.kotlinapplication.data.db.model
+package cn.xxt.kotlinapplication.data.db
 
 class DayForecast(var map: MutableMap<String, Any?>) {
     var _id: Long by map

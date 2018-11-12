@@ -1,9 +1,8 @@
-package cn.xxt.kotlinapplication
+package cn.xxt.kotlinapplication.data.server
 
-import cn.xxt.kotlinapplication.data.ForecastResult
 import com.google.gson.Gson
 
-public class ForecastRequest(val zipCode: String) {
+class ForecastByZipCodeRequest(private val zipCode: Long, val gson: Gson = Gson()) {
     companion object {
         private val APP_ID = "15646a06818f61f7b8d7823ca833e1ce"
         private val URL = "http://api.openweathermap.org/data/2.5/" +
@@ -13,8 +12,18 @@ public class ForecastRequest(val zipCode: String) {
 
     fun execute(): ForecastResult {
         val forecastJsonStr = java.net.URL(COMPLETE_URL + zipCode).readText()
-        return Gson().fromJson(forecastJsonStr, ForecastResult::class.java)
+        return gson.fromJson(forecastJsonStr, ForecastResult::class.java)
     }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
